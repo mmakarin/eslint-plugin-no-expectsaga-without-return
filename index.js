@@ -2,7 +2,7 @@ module.exports = {
     configs: {
         recommended: {
             rules: {
-                "expectSaga-mandatory-return": "warning"
+                "expectSaga-mandatory-return": 1
             }
         }
     },
