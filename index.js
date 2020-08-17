@@ -19,8 +19,8 @@ module.exports = {
                         let parent = node.parent;
                         
                         while (parent) {
-                            if (parent.type === 'ArrowFunctionExpression' ||
-                                (parent.type === 'ReturnStatement' && parent.parent && parent.parent.type === 'BlockStatement')) {
+                            if (parent.type === 'ReturnStatement' && parent.parent &&
+                                (parent.parent.type === 'BlockStatement' || parent.parent.type === 'ArrowFunctionExpression')) {
                                 return;
                             }
                             parent = parent.parent;
