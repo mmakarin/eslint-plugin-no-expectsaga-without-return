@@ -2,12 +2,12 @@ module.exports = {
     configs: {
         recommended: {
             rules: {
-                "expectSaga-mandatory-return": 1
+                "expectSaga-without-return/mandatory-return": 1
             }
         }
     },
     rules: {
-        'expectSaga-mandatory-return': {
+        'expectSaga-without-return/mandatory-return': {
             meta: {
                 fixable: 'code'
             },
