@@ -15,7 +15,7 @@ module.exports = {
             },
             create: function(context) {
                 return {
-                    "BlockStatement *:not(ReturnStatement):last-child MemberExpression Identifier[name='expectSaga']": function (node) {
+                    "BlockStatement > *:not(ReturnStatement):last-child MemberExpression Identifier[name='expectSaga']": function (node) {
                         context.report({
                             node,
                             message: "expectSaga without return",
