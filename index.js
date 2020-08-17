@@ -1,6 +1,7 @@
 module.exports = {
     configs: {
         recommended: {
+            plugins: ['expectSaga-without-return'],
             rules: {
                 "expectSaga-without-return/mandatory-return": 1
             }
