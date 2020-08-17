@@ -19,12 +19,13 @@ module.exports = {
                         let parent = node.parent;
                         
                         while (parent) {
-                        if (parent.type === 'ReturnStatement' && parent.parent && parent.parent.type === 'BlockStatement') {
-                            return;
+                            if (parent.type === 'ArrowFunctionExpression' ||
+                                (parent.type === 'ReturnStatement' && parent.parent && parent.parent.type === 'BlockStatement')) {
+                                return;
+                            }
+                            parent = parent.parent;
                         }
-                        parent = parent.parent;
 
-                        }
                         context.report({
                             node,
                             message: "expectSaga without return",
