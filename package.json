@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-no-expectsaga-without-return",
+  "version": "1.0.0",
+  "description": "Provides an eslint rule to check expectSaga from redux-test-plan is called within return statement only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return.git"
+  },
+  "author": "mmakarin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return/issues"
+  },
+  "homepage": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return#readme"
+}
