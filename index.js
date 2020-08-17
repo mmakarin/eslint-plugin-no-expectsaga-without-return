@@ -7,7 +7,7 @@ module.exports = {
         }
     },
     rules: {
-        'expectSaga-without-return/mandatory-return': {
+        'mandatory-return': {
             meta: {
                 fixable: 'code'
             },

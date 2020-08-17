@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return/issues"
   },
-  "homepage": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return#readme"
+  "homepage": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return#readme",
+  "peerDependencies": {
+    "eslint": "^7.0.0"
+  }
 }
