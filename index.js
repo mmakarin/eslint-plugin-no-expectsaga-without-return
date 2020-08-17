@@ -1,4 +1,11 @@
 module.exports = {
+    configs: {
+        recommended: {
+            rules: {
+                "expectSaga-mandatory-return": "warning"
+            }
+        }
+    },
     rules: {
         'expectSaga-mandatory-return': {
             meta: {
