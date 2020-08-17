@@ -3,7 +3,8 @@ module.exports = {
         recommended: {
             plugins: ['no-expectSaga-without-return'],
             rules: {
-                "no-expectSaga-without-return/mandatory-return": 1
+                // Error
+                "no-expectSaga-without-return/mandatory-return": 2
             }
         }
     },
@@ -14,17 +15,20 @@ module.exports = {
             },
             create: function(context) {
                 return {
-                    ExpressionStatement(node) {
-                        if (node.expression.type === 'CallExpression' && node.expression.callee.name === 'expectSaga') {
-                            context.report({
+                    "BlockStatement *:not(ReturnStatement):last-child MemberExpression Identifier[name='expectSaga']": function (node) {
+                        context.report({
                             node,
-                            message: 'expectSaga without return',
-                
-                            fix: function(fixer) {
-                                return fixer.insertTextBefore(node, 'return ');
+                            message: "expectSaga without return",
+                            fix(fixer) {
+                                var ancestors = context.getAncestors().reverse();
+                    
+                                for (var parent of ancestors) {
+                                    if (parent.type === "ExpressionStatement") {
+                                        return fixer.insertTextBefore(parent, "return ");
+                                    }
+                                }
                             }
-                            });
-                        }
+                        });
                     }
                 }
             }
