@@ -1,10 +1,10 @@
 module.exports = {
     configs: {
         recommended: {
-            plugins: ['no-expectSaga-without-return'],
+            plugins: ['no-expectsaga-without-return'],
             rules: {
                 // Error
-                "no-expectSaga-without-return/mandatory-return": 2
+                "no-expectsaga-without-return/mandatory-return": 2
             }
         }
     },
