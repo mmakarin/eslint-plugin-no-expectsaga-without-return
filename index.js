@@ -36,7 +36,9 @@ module.exports = {
                             node,
                             message: "expectSaga without return",
                             fix(fixer) {
-                              return fixer.insertTextBefore(expressionNode, "return ");
+                                if (expressionNode) {
+                                    return fixer.insertTextBefore(expressionNode, "return ");
+                                }
                             }
                         });
                     }
