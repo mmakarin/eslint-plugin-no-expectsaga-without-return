@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-expectsaga-without-return",
-  "version": "1.0.15",
+  "version": "1.0.17",
   "description": "Provides an eslint rule to check expectSaga from redux-test-plan is called within return statement only",
   "main": "index.js",
   "scripts": {
