@@ -22,10 +22,10 @@ module.exports = {
                       	for (const parent of parents) {
                           // Skip call chains to the closes ExpressionStatement, return or arrow function
                           if (!['CallExpression', 'MemberExpression'].includes(parent.type)) {
-                            if (parent.type === 'ReturnStatement' || parent.type === 'ArrowFunctionExpression') {
-                              return;
+                            if (['ReturnStatement', 'ArrowFunctionExpression', 'AwaitExpression'].includes(parent.type)) {
+                                return;
                             } else if (parent.type === 'ExpressionStatement') {
-                              expressionNode = parent;
+                                expressionNode = parent;
                             }
                             
                             break;
