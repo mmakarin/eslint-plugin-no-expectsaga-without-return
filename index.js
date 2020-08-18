@@ -15,28 +15,12 @@ module.exports = {
             },
             create: function(context) {
                 return {
-                    "BlockStatement > ExpressionStatement:last-child Identifier[name='expectSaga']": function (node) {
-                        let parent = node.parent;
-                        
-                        while (parent) {
-                            if (parent.type === 'ReturnStatement' && parent.parent &&
-                                (parent.parent.type === 'BlockStatement' || parent.parent.type === 'ArrowFunctionExpression')) {
-                                return;
-                            }
-                            parent = parent.parent;
-                        }
-
+                    "BlockStatement > ExpressionStatement:last-child > CallExpression:has(Identifier[name='expectSaga'])": function (node) {
                         context.report({
                             node,
                             message: "expectSaga without return",
                             fix(fixer) {
-                                const ancestors = context.getAncestors().reverse();
-                    
-                                for (let parent of ancestors) {
-                                    if (parent.type === "ExpressionStatement" && parent.parent && parent.parent.type === 'BlockStatement') {
-                                        return fixer.insertTextBefore(parent, "return ");
-                                    }
-                                }
+                              return fixer.insertTextBefore(node, "return ");
                             }
                         });
                     }
