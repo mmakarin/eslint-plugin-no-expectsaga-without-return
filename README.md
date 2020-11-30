@@ -3,7 +3,7 @@ eslint-plugin-no-expectSaga-without-return
 
 [![NPM version][npm-image]][npm-url]
 
-Check that you don't forgot to insert return when calling expectSaga inside a test
+Checks that you don't forgot to insert return when calling expectSaga inside a test.
 
 # Installation
 
