@@ -56,7 +56,7 @@ Enable the rules that you would like to use.
 
 # License
 
-ESLint-plugin-React is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+eslint-plugin-no-expectSaga-without-return is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 [npm-url]: https://www.npmjs.com/package/eslint-plugin-no-expectsaga-without-return
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-react.svg
