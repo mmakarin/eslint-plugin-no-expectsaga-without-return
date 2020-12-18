@@ -16,7 +16,7 @@ $ npm install eslint --save-dev
 If you installed `ESLint` globally, you have to install plugin globally too. Otherwise, install it locally.
 
 ```sh
-$ npm install eslint-plugin-no-expectSaga-without-return --save-dev
+$ npm install eslint-plugin-no-expectsaga-without-return --save-dev
 ```
 
 # Configuration
