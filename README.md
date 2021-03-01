@@ -16,7 +16,7 @@ $ npm install eslint --save-dev
 If you installed `ESLint` globally, you have to install plugin globally too. Otherwise, install it locally.
 
 ```sh
-$ npm install eslint-plugin-no-expectSaga-without-return --save-dev
+$ npm install eslint-plugin-no-expectsaga-without-return --save-dev
 ```
 
 # Configuration
@@ -26,18 +26,18 @@ Use [our preset](#recommended) to get reasonable defaults:
 ```json
   "extends": [
     "eslint:recommended",
-    "plugin:no-expectSaga-without-return/recommended"
+    "plugin:no-expectsaga-without-return/recommended"
   ]
 ```
 
 If you do not use a preset you will need to specify individual rules and add extra configuration.
 
-Add "no-expectSaga-without-return" to the plugins section.
+Add "no-expectsaga-without-return" to the plugins section.
 
 ```json
 {
   "plugins": [
-    "no-expectSaga-without-return"
+    "no-expectsaga-without-return"
   ]
 }
 ```
@@ -46,13 +46,13 @@ Enable the rules that you would like to use.
 
 ```json
   "rules": {
-    "no-expectSaga-without-return/mandatory-return": 2
+    "no-expectsaga-without-return/mandatory-return": 2
   }
 ```
 
 # List of supported rules
 
-* no-expectSaga-without-return/mandatory-return: Enforces return before expectSaga() calls
+* no-expectsaga-without-return/mandatory-return: Enforces return before expectSaga() calls
 
 # License
 
