@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/mmakarin/eslint-plugin-no-expectSaga-without-return#readme",
   "peerDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": ">=7.0.0 <10.0.0"
   }
 }
